@@ -19,7 +19,7 @@ CREATE TABLE ##Transaction (
 
 -- Optional: درج یک ردیف اولیه در صورت نیاز
 INSERT INTO ##Transaction (WarningDate, Qty, Amount, Sign_Deal, diff_date)
-VALUES ('14040101', 30801434, 450587946209.946, 1, 0);
+VALUES ('14040101', 308014, 50587946.946, 1, 0);
 
 -- مرحله 2: جمع‌بندی معاملات سهامدار
 ;WITH T0 AS (
@@ -152,3 +152,4 @@ SELECT
     
 FROM #DealsTemp
 ORDER BY rn;
+
