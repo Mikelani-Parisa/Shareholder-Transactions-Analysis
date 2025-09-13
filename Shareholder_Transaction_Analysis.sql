@@ -146,10 +146,11 @@ SELECT
     rate AS [نرخ ],
 	cum_value AS [بهای تمام شده تجمعی],
     cum_qty AS [تعداد تجمعی],
-    CASE WHEN Sign_Deal = -1 THEN Amount - value_buy_sale ELSE 0 END AS [سودوزیان],
+    CASE WHEN Sign_Deal = -1 THEN Amount + value_buy_sale ELSE 0 END AS [سودوزیان],
     CASE WHEN Sign_Deal = 1 THEN (diff_date * Qty)/365 ELSE 0 END AS [میانگین ],
 	value_buy_sale AS [بهای تمام شده]
     
 FROM #DealsTemp
 ORDER BY rn;
+
 
